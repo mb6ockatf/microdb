@@ -1,0 +1,7 @@
+aiohttp
+sqlalchemy[asyncio]
+aiohttp-sqlalchemy
+asyncpg
+alembic
+PyYAML
+black

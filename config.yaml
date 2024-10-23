@@ -1,0 +1,5 @@
+common:
+  port: 8080
+postgres:
+  database_url: postgresql+asyncpg://mb6ockatf:ananas@0.0.0.0/microdb
+  require_ssl: false
