@@ -3,7 +3,7 @@ from aiohttp import web
 from sqlalchemy import MetaData, orm
 from aiohttp_sqlalchemy import setup, bind, init_db, get_session
 from settings import config
-from views import list_users_view_get, subscribe
+from views import list_users_view_get, subscribe, subscription_check
 
 
 async def main():
@@ -24,7 +24,11 @@ async def app_factory():
     )
     await init_db(application, metadata)
     application.add_routes(
-        [web.get("/", main), web.get("/api_v1/subscribe", subscribe)]
+        [
+            web.get("/", main),
+            web.get("/api_v1/subscribe", subscribe),
+            web.get("/api_v1/subscription_check", subscription_check),
+        ]
     )
     return application
 
