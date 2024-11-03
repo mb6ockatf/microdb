@@ -124,6 +124,8 @@
 *.gitattributes linguist-detectable
 *.ini linguist-documentation=false
 *.ini linguist-detectable
+*.mako linguist-documentation=false
+*.mako linguist-detectable
 
 *.mps linguist-detectable=false
 
